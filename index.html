@@ -20,10 +20,12 @@
 
              function download () {
                 console.log(window.swan);
+                var link = isIOS ? 'https://itunes.apple.com/cn/app/%E8%80%81%E8%99%8E%E8%AF%81%E5%88%B8-%E7%BE%8E%E6%B8%AF%E8%82%A1%E6%89%93%E6%96%B0%E5%BC%80%E6%88%B7%E7%82%92%E8%82%A1%E5%B9%B3%E5%8F%B0/id1023600494' : 'https://mobile.baidu.com/item?docid=28131854';
+                console.log('link', link);
                 window.swan.openApp({
                     open: 'tigertrade://',
                     download: {
-                        url: isIOS ? 'https://apps.apple.com/cn/app/%E8%80%81%E8%99%8E%E8%AF%81%E5%88%B8-%E7%BE%8E%E6%B8%AF%E8%82%A1%E6%89%93%E6%96%B0%E5%BC%80%E6%88%B7%E7%82%92%E8%82%A1%E5%B9%B3%E5%8F%B0/id1023600494' : 'https://a.app.qq.com/o/simple.jsp?pkgname=com.tigerbrokers.stock',
+                        url: link,
                         from: ''
                     }
                 })
@@ -35,6 +37,7 @@
     </head>
     <body>
         <button onclick="download()">download test</button>
+        <button onclick="download('')">download test</button>
     </body>
 </html>
 
