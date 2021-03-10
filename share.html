@@ -37,8 +37,9 @@
             }
 
             function share2 () {
+                var redirect_uri = location.origin + '/redirect.html';
 
-                var url = 'https://www.facebook.com/v5.0/dialog/share?app_id=485603715930076&href='+ encodeURIComponent(location.href) +'&display=page';
+                var url = 'https://www.facebook.com/v5.0/dialog/share?app_id=485603715930076&href='+ encodeURIComponent(location.href) +'&display=page&redirect_uri=' + encodeURIComponent(redirect_uri);
 
                 location.href = url;
             }
